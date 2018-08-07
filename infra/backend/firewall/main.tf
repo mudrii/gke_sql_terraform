@@ -2,7 +2,7 @@
 # Create a firewall rule that allows internal communication across all protocols:
 resource "google_compute_firewall" "firewalli-int" {
   name    = "${terraform.workspace}-firewall-int"
-  network = "${var.network}"
+  network = "${var.vpc_name}"
 
   allow {
     protocol = "icmp"
@@ -22,7 +22,7 @@ resource "google_compute_firewall" "firewalli-int" {
 # Create a firewall rule that allows external SSH, ICMP, and HTTPS:
 resource "google_compute_firewall" "firewalli-ext" {
   name    = "${terraform.workspace}-firewall-ext"
-  network = "${var.network}"
+  network = "${var.vpc_name}"
 
   allow {
     protocol = "icmp"

@@ -23,16 +23,14 @@ module "vpc" {
 module "subnet" {
   source      = "./backend/subnet"
   region      = "${var.region}"
-  network     = "${module.vpc.vpc_name}"
+  vpc_name     = "${module.vpc.vpc_name}"
   subnet_cidr = "${var.subnet_cidr}"
 }
 
 module "firewall" {
   source        = "./backend/firewall"
-  network       = "${module.vpc.vpc_name}"
+  vpc_name       = "${module.vpc.vpc_name}"
   ip_cidr_range = "${module.subnet.ip_cidr_range}"
-
-  #  subnet_cidr                 = "${var.subnet_cidr}"
 }
 
 module "cloudsql" {
@@ -56,6 +54,8 @@ module "gke" {
   min_master_version    = "${var.min_master_version}"
   node_version          = "${var.node_version}"
   gke_num_nodes         = "${var.gke_num_nodes}"
+  vpc_name              = "${module.vpc.vpc_name}"
+  subnet_name           = "${module.subnet.subnet_name}"
   gke_master_user       = "${var.gke_master_user}"
   gke_master_pass       = "${var.gke_master_pass}"
   gke_node_machine_type = "${var.gke_node_machine_type}"

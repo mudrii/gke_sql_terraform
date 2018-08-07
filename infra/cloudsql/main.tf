@@ -1,5 +1,13 @@
+provider "random" {}
+
+resource "random_id" "id" {
+  byte_length = 4
+  prefix      = "sql-${terraform.workspace}-"
+}
+
 resource "google_sql_database_instance" "master" {
-  name             = "metest-${terraform.workspace}-master"
+#  name             = "sql-${terraform.workspace}-master"
+  name             = "${random_id.id.hex}"
   region           = "${var.region}"
   database_version = "POSTGRES_9_6"
 

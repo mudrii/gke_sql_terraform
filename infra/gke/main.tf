@@ -12,8 +12,8 @@ resource "google_container_cluster" "primary" {
   node_version       = "${var.node_version}"
   enable_legacy_abac = false
   initial_node_count = "${var.gke_num_nodes[terraform.workspace]}"
-  network            = "${terraform.workspace}-vpc"
-  subnetwork         = "${terraform.workspace}-subnet"
+  network            = "${var.vpc_name}"
+  subnetwork         = "${var.subnet_name}"
 
   addons_config {
     http_load_balancing {

@@ -15,17 +15,16 @@ output "ip_cidr_range" {
   description = "Export created CICDR range"
 }
 
-/*
 # cloud SQL postgresql outputs
 output "master_instance_sql_ipv4" {
-  value       = "${google_sql_database_instance.sql_master.ip_address.0.ip_address}"
+  value       = "${module.cloudsql.master_instance_sql_ipv4}"
   description = "The IPv4 address assigned for master"
 }
 
 # GKE outputs
 output "endpoint" {
-  value       = "${google_container_cluster.primary.endpoint}"
+  value       = "${module.gke.endpoint}"
   description = "Endpoint for accessing the master node"
 }
-*/
+
 

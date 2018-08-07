@@ -4,7 +4,7 @@ variable "region" {
   description = "Region of resources"
 }
 
-variable "network" {
+variable "vpc_name" {
   description = "Netwrok name"
 }
 
