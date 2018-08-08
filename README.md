@@ -10,7 +10,8 @@ Gcloud deployment differs from Linux distribution and you can follow the [link](
 #### OS X
 
 ```sh
-curl -o terraform_0.11.7_darwin_amd64.zip https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_darwin_amd64.zip
+curl -o terraform_0.11.7_darwin_amd64.zip \
+https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_darwin_amd64.zip 
 
 unzip terraform_0.11.7_linux_amd64.zip -d /usr/local/bin/
 ```
@@ -18,7 +19,8 @@ unzip terraform_0.11.7_linux_amd64.zip -d /usr/local/bin/
 #### Linux
 
 ```sh
-curl https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip > terraform_0.11.7_linux_amd64.zip
+curl https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip \
+> terraform_0.11.7_linux_amd64.zip
 
 unzip terraform_0.11.7_linux_amd64.zip -d /usr/local/bin/
 ```
@@ -36,7 +38,8 @@ terraform version
 #### OS X
 
 ```sh
-curl -o kubectl https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/darwin/amd64/kubectl
+curl -o kubectl \
+https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/darwin/amd64/kubectl
 
 chmod +x kubectl
 
@@ -46,7 +49,8 @@ sudo mv kubectl /usr/local/bin/
 #### Linux
 
 ```sh
-wget https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/linux/amd64/kubectl
+wget \
+https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/linux/amd64/kubectl
 
 chmod +x kubectl
 
