@@ -116,6 +116,7 @@ Create the service account in the Terraform admin project and download the JSON 
 ```sh
 gcloud iam service-accounts create terraform \
 --display-name "Terraform admin account"
+
 gcloud iam service-accounts keys create ${TF_CREDS} \
 --iam-account terraform@${TF_ADMIN}.iam.gserviceaccount.com
 ```
