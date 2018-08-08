@@ -362,6 +362,7 @@ With above code we only created new project in Google Cloud and this dependent o
 
 [![asciicast](https://asciinema.org/a/195482.png)](https://asciinema.org/a/195482)
 
+
 ## Creating Kubernetes cluster on GKE and PostgreSQL on Cloud SQL
 
 Once we have project ready for dev and prod we can move into deploying our gke and sql infrastructure.
