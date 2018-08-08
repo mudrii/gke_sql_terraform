@@ -360,7 +360,7 @@ terraform apply
 
 With above code we only created new project in Google Cloud and this dependent of the in what terraform workspace we are in.
 
-![](../asciinema/gke_projectS1.gif)
+[![asciicast](https://asciinema.org/a/195482.png)](https://asciinema.org/a/195482)
 
 ## Creating Kubernetes cluster on GKE and PostgreSQL on Cloud SQL
 
@@ -549,7 +549,7 @@ terraform plan
 terraform apply
 ```
 
-![](../asciinema/gke_projectS1.gif)
+[![asciicast](https://asciinema.org/a/195490.png)](https://asciinema.org/a/195490)
 
 * To check what terraform deployed use
 
