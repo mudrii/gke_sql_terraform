@@ -593,7 +593,7 @@ tflint
 * Destroy only selected module Ex.
 
 ```sh
-terraform destroy - target=module.cloudsql
+terraform destroy -target=module.cloudsql
 ```
 
 _Source code can be found in [Github](https://github.com/mudrii/gke_sql_terraform)_
