@@ -92,7 +92,7 @@ export TF_ADMIN=terraform-admin-example
 export TF_CREDS=~/.config/gcloud/terraform-admin.json
 ```
 
-NOTE: value of YOUR_ORG_ID and YOUR_BILLING_ACCOUNT_ID you can find by running
+> NOTE: value of YOUR_ORG_ID and YOUR_BILLING_ACCOUNT_ID you can find by running
 
 ```sh
 gcloud organizations list
@@ -329,7 +329,7 @@ terraform init
 
 Once we have our project code and our tfvar secretes secure we can create workspaces for terraform
 
-_NOTE: in below example we will use only dev workspace but you can use both following same logic_
+> NOTE: in below example we will use only dev workspace but you can use both following same logic
 
 * Create dev workspace
 
@@ -511,7 +511,7 @@ We are now ready to to run our plan and create infrastructure.
 
 As we are in separate code base will need to follow same sequence as in project creation.
 
-_NOTE: Just make sure you have new terraform.tfvars_
+> NOTE: Just make sure you have new terraform.tfvars
 
 ```sh
 bucket_name         = "terraform-admin-example"
