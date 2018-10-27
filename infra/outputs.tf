@@ -15,7 +15,7 @@ output "ip_cidr_range" {
   description = "Export created CICDR range"
 }
 
-# cloud SQL postgresql outputs
+# Cloud SQL postgresql outputs
 output "master_instance_sql_ipv4" {
   value       = "${module.cloudsql.master_instance_sql_ipv4}"
   description = "The IPv4 address assigned for master"

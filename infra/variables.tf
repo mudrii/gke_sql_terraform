@@ -87,12 +87,12 @@ variable "sql_pass" {
 # GKE variables
 
 variable "min_master_version" {
-  default     = "1.10.5-gke.3"
+  default     = "1.10.7-gke.6"
   description = "Number of nodes in each GKE cluster zone"
 }
 
 variable "node_version" {
-  default     = "1.10.5-gke.3"
+  default     = "1.10.7-gke.6"
   description = "Number of nodes in each GKE cluster zone"
 }
 
