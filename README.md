@@ -10,24 +10,24 @@ Gcloud deployment differs from Linux distribution and you can follow the [link](
 #### OS X
 
 ```sh
-curl -o terraform_0.11.7_darwin_amd64.zip \
-https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_darwin_amd64.zip 
+curl -o terraform_0.11.10_darwin_amd64.zip \
+https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.10_darwin_amd64.zip 
 
-unzip terraform_0.11.7_linux_amd64.zip -d /usr/local/bin/
+unzip terraform_0.11.10_linux_amd64.zip -d /usr/local/bin/
 ```
 
 #### Linux
 
 ```sh
-curl https://releases.hashicorp.com/terraform/0.11.7/terraform_0.11.7_linux_amd64.zip \
-> terraform_0.11.7_linux_amd64.zip
+curl https://releases.hashicorp.com/terraform/0.11.10/terraform_0.11.7_linux_amd64.zip \
+> terraform_0.11.10_linux_amd64.zip
 
-unzip terraform_0.11.7_linux_amd64.zip -d /usr/local/bin/
+unzip terraform_0.11.10_linux_amd64.zip -d /usr/local/bin/
 ```
 
 #### Verification
 
-Verify terraform version 0.11.7 or higher is installed:
+Verify terraform version 0.11.10 or higher is installed:
 
 ```sh
 terraform version
@@ -39,7 +39,7 @@ terraform version
 
 ```sh
 curl -o kubectl \
-https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/darwin/amd64/kubectl
+https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/darwin/amd64/kubectl
 
 chmod +x kubectl
 
@@ -50,7 +50,7 @@ sudo mv kubectl /usr/local/bin/
 
 ```sh
 wget \
-https://storage.googleapis.com/kubernetes-release/release/v1.11.0/bin/linux/amd64/kubectl
+https://storage.googleapis.com/kubernetes-release/release/v1.12.0/bin/linux/amd64/kubectl
 
 chmod +x kubectl
 
@@ -88,8 +88,8 @@ Best practice to use separate account "technical account" to manage infrastructu
 ```sh
 export TF_VAR_org_id=YOUR_ORG_ID
 export TF_VAR_billing_account=YOUR_BILLING_ACCOUNT_ID
-export TF_ADMIN=terraform-admin-example
-export TF_CREDS=~/.config/gcloud/terraform-admin.json
+export TF_ADMIN=terraform-admin-demo
+export TF_CREDS=~/.config/gcloud/terraform-admin-demo.json
 ```
 
 > NOTE: value of YOUR_ORG_ID and YOUR_BILLING_ACCOUNT_ID you can find by running
@@ -226,7 +226,7 @@ org_id              = "XXXXXXXXXXX"
 ```go
 terraform {
   backend "gcs" {
-    bucket = "terraform-admin-mmm"
+    bucket = "terraform-admin-demo"
     prefix = "terraform-project"
   }
 }
@@ -514,7 +514,7 @@ As we are in separate code base will need to follow same sequence as in project 
 > NOTE: Just make sure you have new terraform.tfvars
 
 ```sh
-bucket_name         = "terraform-admin-example"
+bucket_name         = "terraform-admin-demo"
 gke_master_pass     = "your-gke-password"
 sql_pass            = "your-sql-password"
 ```
